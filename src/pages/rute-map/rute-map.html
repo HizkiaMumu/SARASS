@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ this.schoolData.nama_sekolah }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div #map id="map"></div>
+
+  <div class="route-detail">
+    <h1 class="detail-title">{{ this.schoolData.nama_sekolah }}</h1>
+    <span class="detail-distance">{{ this.distance }} KM | </span>
+    <span class="detail-time">{{ this.time }} Minute ({{ this.transportation }})</span>
+  </div>
+
+</ion-content>

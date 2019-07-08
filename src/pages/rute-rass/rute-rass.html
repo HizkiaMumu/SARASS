@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title *ngIf="!this.showSearchbar">Rute RASS</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="this.toogleSearchBar()">
+        <ion-icon name="search" *ngIf="!this.showSearchbar" style="font-size: 22px !important;"></ion-icon>
+        <ion-icon name="close" *ngIf="this.showSearchbar" style="font-size: 22px !important;"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-searchbar *ngIf="this.showSearchbar" (ionInput)="getItems($event)" class="animated fadeIn"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="not-found animated fadeIn" *ngIf="this.schools?.sekolah == null && this.trafficDone" style="text-align: center;">
+    <img src="assets/imgs/404.png" width="32%" height="auto">
+    <h5>Data tidak ditemukan</h5>
+    <p>Maaf, data rute sekolah tidak ditemukan</p>
+  </div>
+
+  <ion-card *ngFor="let school of this.schools?.sekolah" (click)="this.pushTransportationPage(school)">
+    <img src="http://sarass.101creative.id/{{ school.gambar }}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ school.nama_sekolah }}
+      </ion-card-title>
+      <p>
+        {{ school.alamat }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

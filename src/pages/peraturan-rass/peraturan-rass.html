@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title *ngIf="!this.showSearchbar">Peraturan RASS</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="this.toogleSearchBar()">
+        <ion-icon name="search" *ngIf="!this.showSearchbar" style="font-size: 22px !important;"></ion-icon>
+        <ion-icon name="close" *ngIf="this.showSearchbar" style="font-size: 22px !important;"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-searchbar *ngIf="this.showSearchbar" (ionInput)="getItems($event)" class="animated fadeIn"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let peraturan of this.peraturanRass?.peraturan" (click)="this.pushDetailPeraturanPage(peraturan)">
+      <h2 style="font-weight: 900 !important;">{{ peraturan.title }}</h2>
+      <p style="margin-top: 5px">{{ peraturan.body }}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

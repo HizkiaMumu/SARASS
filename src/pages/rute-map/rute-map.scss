@@ -1,0 +1,23 @@
+page-rute-map {
+
+  #map {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .route-detail {
+    position: fixed !important;
+    bottom: 15px !important;
+    left: 15px !important;
+    z-index: 1000 !important;
+  }
+
+  .route-detail .detail-title {
+    margin: 0px !important;
+  }
+
+  img[src*="https://maps.gstatic.com/mapfiles/api-3/images/google4_hdpi.png"], .gm-style-cc {
+    display: none;
+  }
+
+}

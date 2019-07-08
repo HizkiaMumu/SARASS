@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Pilih Transportasi</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="transportation-card" (click)="this.selectTransportation('Jalan Kaki')">
+    <ion-row>
+      <ion-col col-2 style="text-align: center !important;">
+        <img src="assets/icon/pedestrian.png" width="80%" height="auto">
+      </ion-col>
+      <ion-col style="padding: 0px 10px;">
+        <h3>Jalan Kaki</h3>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="transportation-card" (click)="this.selectTransportation('Bersepeda')">
+    <ion-row>
+      <ion-col col-2 style="text-align: center !important;">
+        <img src="assets/icon/mountain.png" width="80%" height="auto">
+      </ion-col>
+      <ion-col style="padding: 0px 10px;">
+        <h3>Bersepeda</h3>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="transportation-card" (click)="this.selectTransportation('Kendaraan Pribadi')">
+    <ion-row>
+      <ion-col col-2 style="text-align: center !important;">
+        <img src="assets/icon/automobile.png" width="80%" height="auto">
+      </ion-col>
+      <ion-col style="padding: 0px 10px;">
+        <h3>Kendaraan Pribadi</h3>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="transportation-card">
+    <ion-row>
+      <ion-col col-2 style="text-align: center !important;">
+        <img src="assets/icon/school-bus.png" width="80%" height="auto">
+      </ion-col>
+      <ion-col style="padding: 0px 10px;">
+        <h3>Bus</h3>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="transportation-card">
+    <ion-row>
+      <ion-col col-2 style="text-align: center !important;">
+        <img src="assets/icon/jeepney.png" width="80%" height="auto">
+      </ion-col>
+      <ion-col style="padding: 0px 10px;">
+        <h3>Angkot</h3>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>

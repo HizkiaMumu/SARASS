@@ -1,14 +1,59 @@
-<ion-header>
-  <ion-navbar>
+<ion-header style="text-align: center;">
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      <img src="assets/icon/logo-white.png" height="22px" width="auto">
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <img src="assets/imgs/banner.jpeg" width="100%" height="auto">
+
+  <ion-grid style="margin-top: 10px;">
+    <ion-row>
+      <ion-col>
+        <div class="menu-box" (click)="this.pushFasilitasRassPage()">
+          <img src="assets/icon/taxi.png" height="40px" width="auto">
+          <h5 style="font-size: 10px !important; margin: 10px 0px 0px 0px !important;">Fasilitas RASS</h5>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="menu-box" (click)="this.pushPeraturanRassPage()">
+          <img src="assets/icon/open-book.png" height="40px" width="auto">
+          <h5 style="font-size: 10px !important; margin: 10px 0px 0px 0px !important;">Peraturan RASS</h5>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="menu-box" (click)="this.pushRuteRassPage()">
+          <img src="assets/icon/map-1.png" height="40px" width="auto">
+          <h5 style="font-size: 10px !important; margin: 10px 0px 0px 0px !important;">Rute RASS</h5>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid style="margin-top: -10px;">
+    <ion-row>
+      <ion-col>
+        <div class="menu-box" (click)="this.popPage();">
+          <img src="assets/icon/log-out.png" height="40px" width="auto">
+          <h5 style="font-size: 10px !important; margin: 10px 0px 0px 0px !important;">Keluar</h5>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="menu-box">
+          <img src="assets/icon/boss.png" height="40px" width="auto">
+          <h5 style="font-size: 10px !important; margin: 10px 0px 0px 0px !important;">Tentang</h5>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="menu-box" (click)="this.pushInfoPage()">
+          <img src="assets/icon/youtube.png" height="40px" width="auto">
+          <h5 style="font-size: 10px !important; margin: 10px 0px 0px 0px !important;">Video Sosialisasi</h5>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

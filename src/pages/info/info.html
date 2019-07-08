@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title *ngIf="!this.showSearchbar">Info RASS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <iframe *ngFor="let i of this.infoData?.info" width="100%" height="215" [src]="i.trustedVideoUrl" frameborder="0" allowfullscreen></iframe>
+
+</ion-content>
